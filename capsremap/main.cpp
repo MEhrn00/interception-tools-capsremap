@@ -127,7 +127,8 @@ int main(int argc, const char *argv[]) {
     for (;;) {
         std::optional<struct input_event> event = {};
         try {
-            if ((event = read_event()); event) {
+            event = read_event();
+            if (event) {
                 struct input_event input = event.value();
                 if (input.type == EV_MSC && input.code == MSC_SCAN) {
                     continue;
