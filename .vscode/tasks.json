@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Meson: compile program",
+      "type": "shell",
+      "group": "build",
+      "command": "meson",
+      "args": [
+        "compile",
+        "-C",
+        "builddir"
+      ]
+    },
+    {
+      "label": "Meson: configure",
+      "type": "shell",
+      "command": "meson",
+      "args": [
+        "setup",
+        "--reconfigure",
+        "builddir"
+      ]
+    }
+  ]
+}
