@@ -1,0 +1,5 @@
+option('install_config',
+  type : 'boolean',
+  value : true,
+  description : 'Install interception tools configuration file',
+)
